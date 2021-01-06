@@ -1,0 +1,184 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right top,
+    #3ed0ee,
+    #00bef9,
+    #00a9ff,
+    #0091ff,
+    #1c74fd
+  );
+}
+
+.login-container {  
+  display: grid;
+  row-gap: 0.2rem;
+  grid-template-columns: minmax(310px, 500px);
+  height: 85%;
+  margin: 10px;
+  grid-template-rows: 1.5fr 3fr 1fr 2fr 2.5fr;
+  background: #ffffff;
+  border-radius: 0.4rem;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.form {
+  width: 80%;
+}
+
+label {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 0.3rem;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6e6e6e;
+}
+
+input[type="email"]::before {
+  content: "f1fa";
+  display: block;
+}
+
+.forgot-password-container {
+  display: flex;
+  width: 80%;
+  justify-content: flex-end;
+}
+
+.btn-forgot-password {  
+  font-weight: 500;
+  text-align: right;
+  color: #383838;
+}
+
+.btn-forgot-password:hover {
+  color: #808080;
+}
+
+.btn-login {
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  background: hsl(209, 85%, 61%);
+  color: #ffffff;
+  text-transform: uppercase;
+  display: block;
+  cursor: pointer;
+  border: none;
+  width: 80%;
+  border-radius: 50px;
+  height: 3rem;
+}
+
+.btn-login:hover {
+  background: hsl(209, 85%, 70%);
+}
+
+.alternative-login {
+  justify-content: space-around;
+}
+
+.social-media-container {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -25px;
+}
+
+.social-media-container p {
+  color: #383838;
+}
+
+.social-media img {
+  width: 50px;
+}
+
+.social-media:hover img {
+  opacity: 0.5;
+}
+
+.sign-up-container {
+  justify-content: flex-end;
+}
+
+.sign-up-container p,
+.sign-up-container a {
+  margin-bottom: 2rem;
+}
+
+.sign-up-container a {
+  text-transform: uppercase;
+  color: #383838;
+}
+
+.sign-up-container a:hover{
+  color: #808080;
+}
+
+
+@media screen and (max-width:500px) {  
+
+  .login-container {
+    height: 95%;
+  }
+  
+  .social-media img {
+    width: 40px;
+  }
+
+}
