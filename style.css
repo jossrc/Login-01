@@ -85,14 +85,25 @@ input {
 }
 
 input::placeholder {
+  position: relative;
+  left: 2rem;
   font-size: 1rem;
   font-weight: 500;
   color: #6e6e6e;
 }
 
-input[type="email"]::before {
-  content: "f1fa";
+.input-email, .input-password{
+  position: relative;
+}
+
+.input-email i,
+.input-password i {
   display: block;
+  color: #6e6e6e;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 10px;
+  left: 5px;
 }
 
 .forgot-password-container {
